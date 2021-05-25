@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scrummers</title>
+</head>
+<body>
+<h1>Books</h1>
+<a type="button" href="{% url 'create_book' %}">Create</a>
+{% for book in books %}
+    <h2>Title: {{ book.title }}</h2>
+    <h3>Author: {{ book.author.name }}</h3>
+    <img src="{{ book.cover.url }}">
+{% endfor %}
+</body>
+</html>
